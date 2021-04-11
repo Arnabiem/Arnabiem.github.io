@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title> Web App – Simple Interest Calculator</title>
     <script type="text/javascript" src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,7 +14,7 @@
            
             <h1>Simple Interest Calculator</h1>
             Amount :<input type="number" id="principal" value="1"> <br />
-            Rate :<input type="range" id="rate" min="0" max="10" step=".1" value="1">
+            Rate :<input type="range" id="rate" min="1" max="10" step=".1" value="1">
             <output for="rate" name="val"></output> <br />
             No. of Years : <select name="cars" id="years">
                 <option value="1">1</option>
@@ -39,7 +40,7 @@
         <div id="result">
         <div class="res1"><h4></h4>If you deposit Rs.<div id="am" ></div></h4></div>
         <div class="res2"><h4>at an interest rate of</h4><div id="ir"></div></div>
-        <div class="res3"><h4>you will receive an ammount of</h4><div id="rl"></div></div>
+        <div class="res3"><h4>you will receive an amount of</h4><div id="rl"></div></div>
         <div class="res4"><h4>in the year</h4><div id="yr"></div></div>
     </div>
 </body>
