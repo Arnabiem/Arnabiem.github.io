@@ -4,17 +4,26 @@
     margin:0;
     box-sizing: border-box;
 }
+body
+{
+    background-color: rgb(238, 235, 235);
+}
 .navbar
 {
     background-color: rgb(51, 47, 47);
     width: 100%;
     color: rgb(202, 195, 195);
-    overflow: auto;
+    overflow: hidden;
     
 }    
+.navbar li a:hover
+{
+    color: brown;
+}
 .navbar li
 {
-    float: left;
+    
+     float: left; 
     list-style: none;
     text-transform:uppercase;
     margin-right: 30px;
@@ -22,12 +31,21 @@
     cursor: pointer;
    
 }
-.navbar ul{
-    float: right;
+.navbar li a
+{
+    color: rgb(202, 195, 195);
+    text-decoration: none;
+    font-size: 20px;
+}
+.navbar ul
+{
+   float: right;  
     overflow: auto;
+    
 }
 .navbar li:hover
 {
+
     color: brown;
     background-color: rgb(218, 208, 208);
     border-top:1px solid rgb(218, 208, 208) ;
@@ -39,7 +57,6 @@
 {
     height: 100%;
     width: 100%;
-    background-color: rgb(223, 217, 217);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -100,4 +117,75 @@ input[type="submit"]
 input[type="submit"]:hover
 {
     background: #208b2e; 
+}
+.navbar #bmenu
+{
+    display: none;
+}
+@media only screen and (max-width: 600px) 
+{
+    .navbar
+    {
+        background-color: rgb(51, 47, 47);
+        width: 100%;
+        color: rgb(202, 195, 195);
+        overflow: hidden;
+        height:60px ;
+    }    
+    .navbar li
+    {
+        list-style: none;
+        text-transform:uppercase;
+        margin-right: 30px;
+        padding: 25px;
+        cursor: pointer;
+       margin: auto;
+       
+       
+    }
+    .navbar li a
+    {
+        color: rgb(202, 195, 195);
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .navbar ul
+    {
+        padding-top:70px ;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .navbar li :hover
+{
+    text-align: center;
+    align-content: center;
+    width: 100%;
+    color: brown;
+    background-color: rgb(218, 208, 208);
+    border-top:1px solid rgb(218, 208, 208) ;
+    border-bottom:1px solid rgb(218, 208, 208) ;
+    
+    
+}
+.navbar #bmenu
+{
+    display: block;
+    margin: 20px;
+    cursor: pointer;
+}
+.navbar #bmenu .line1, .line2,.line3
+{
+    position: relative;
+    margin: 5px;
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+}
+{
+    display: block;
+}
+    
 }
