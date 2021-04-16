@@ -4,7 +4,7 @@ function bmenu()
     if(nbar.style.height !="500px")
     {
     nbar.style.height="500px";
-    nbar.style.transition="0.8s ease-in";
+    nbar.style.transition="0.4s ease-in";
     }
     else
     {

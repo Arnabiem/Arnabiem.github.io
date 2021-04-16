@@ -10,7 +10,7 @@ body
 }
 .navbar
 {
-    background-color: rgb(51, 47, 47);
+    background-color: #32AEB1;
     width: 100%;
     color: rgb(202, 195, 195);
     overflow: hidden;
@@ -48,8 +48,7 @@ body
 
     color: brown;
     background-color: rgb(218, 208, 208);
-    border-top:1px solid rgb(218, 208, 208) ;
-    border-bottom:1px solid rgb(218, 208, 208) ;
+
     
     
 }
@@ -79,7 +78,17 @@ body
     top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 500px;
+    width: 100%;
+    margin-left: 500px;
+}
+.search-bar h1{
+    position: absolute;
+    margin-top: 20px;
+}
+.search-bar span
+{
+    position: absolute;
+    margin: 5px 0px 0px 5px;
 }
 input
 {
@@ -98,23 +107,62 @@ input[type="text"]
     border: 2px solid rgb(33, 33, 34);;
     padding: 0 25px;
     left: -5px;
-    border-radius: 25px 0 0 25px;
+    border-radius: 0px 0px 0px 0px;
     outline: none;
     margin-top: 10px;
 }
-input[type="submit"]
+input[type="tel"]
+{
+    font-size: 12px;
+     width: 45px;
+    height: 20px;
+    border: none;
+    outline: none;
+    top: 24px;
+    left: 8px;
+}
+#ico
+{
+    font-size: 24px;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    color: rgb(209, 13, 13);
+}
+.location
 {
     position: relative;
-    border-radius: 0 25px 25px 0 ;
-    width: 150px;
+    left: -100px;
+    top: 60px;
+    background: #fff;
+    width: 100px;
+    height: 50px;
+    border: 2px solid rgb(33, 33, 34);
+    padding: 0 25px;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    margin-top: 10px;
+}
+button[type="submit"]
+{
+    position: relative;
+    border-radius: 0 10px 10px 0 ;
+    width: 50px;
     height: 50px;
     border: none;
+    margin: -10px;
     outline: none;
     cursor: pointer;
     color: white;
     background: rgb(33, 33, 34);
 }
-input[type="submit"]:hover
+#search-ico
+{
+    
+    font-size: 20px;
+   
+}
+button[type="submit"]:hover
 {
     background: #208b2e; 
 }
@@ -122,11 +170,17 @@ input[type="submit"]:hover
 {
     display: none;
 }
+footer .ftr
+{
+    background-color: #32AEB1;
+    height:300px ;
+    width: 100%;
+}
 @media only screen and (max-width: 600px) 
 {
     .navbar
     {
-        background-color: rgb(51, 47, 47);
+        background-color: #32AEB1;
         width: 100%;
         color: rgb(202, 195, 195);
         overflow: hidden;
@@ -158,17 +212,14 @@ input[type="submit"]:hover
         width: 100%;
         
     }
-    .navbar li :hover
+    .navbar li:hover
 {
     text-align: center;
     align-content: center;
-    width: 100%;
+ background-color: #32AEB1;
     color: brown;
-    background-color: rgb(218, 208, 208);
     border-top:1px solid rgb(218, 208, 208) ;
     border-bottom:1px solid rgb(218, 208, 208) ;
-    
-    
 }
 .navbar #bmenu
 {
@@ -186,6 +237,42 @@ input[type="submit"]:hover
 }
 {
     display: block;
+}
+.search-bar
+{
+    position: absolute;
+    width: 100%;
+    top: -50px;
+    margin-left:180px ;
+}
+.search-bar h1
+{
+    display: none;
+}
+.location
+{
+    width: 80px;
+    height: 40px;
+    left: -80px;
+    top: 50px;
+}
+input[type="tel"]
+{
+    top: 10px;
+    left: 3.5px;
+}
+.location span{
+    display: none;
+}
+input[type="text"]
+{
+    width: 200px;
+    height: 40px;
+}
+button[type="submit"]
+{
+    width: 50px;
+    height: 40px;
 }
     
 }
