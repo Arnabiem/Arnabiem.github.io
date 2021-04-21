@@ -7,16 +7,14 @@
 body
 {
     background-color: rgb(238, 235, 235);
-    overflow-x: hidden;
 }
 .navbar
 {
     background-color: #32AEB1;
     width: 100%;
-    color: rgb(255, 255, 255);
+    color: rgb(202, 195, 195);
     overflow: hidden;
-    margin-bottom: 20px;
-    box-shadow: 0px 5px 5px rgb(133, 133, 133);
+    
 }    
 .navbar li a:hover
 {
@@ -35,7 +33,7 @@ body
 }
 .navbar li a
 {
-    color: rgb(228, 226, 226);
+    color: rgb(202, 195, 195);
     text-decoration: none;
     font-size: 20px;
 }
@@ -61,7 +59,6 @@ body
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 .container .items
 {
@@ -82,9 +79,7 @@ body
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 500px;
 }
 .search-bar h1{
     position: absolute;
@@ -94,9 +89,6 @@ body
 {
     position: absolute;
     margin: 5px 0px 0px 5px;
-}
-.location span {
-    color: black;
 }
 input
 {
@@ -184,12 +176,7 @@ footer .ftr
     height:300px ;
     width: 100%;
 }
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 5px 0px;
-}
-* {
+{
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -202,7 +189,6 @@ footer a {
 .row{
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 
 ul{
@@ -245,7 +231,7 @@ ul{
         width: 100%;
         color: rgb(202, 195, 195);
         overflow: hidden;
-        height:60px;
+        height:60px ;
     }    
     .navbar li
     {
@@ -257,10 +243,6 @@ ul{
        margin: auto;
        
        
-    }
-    .search-bar {
-        display: block;
-        margin-left: 180px;
     }
     .navbar li a
     {
@@ -300,11 +282,15 @@ ul{
     width: 20px;
     height: 2px;
 }
+{
+    display: block;
+}
 .search-bar
 {
     position: absolute;
     width: 100%;
     top: -50px;
+    margin-left:180px ;
 }
 .search-bar h1
 {
