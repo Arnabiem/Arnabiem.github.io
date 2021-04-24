@@ -1,0 +1,74 @@
+.hos-detail-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.hos-detail-flex img {
+    width: calc(50% - 70px);
+    height: 100%;
+}
+.hos-detail-flex .hos-detail {
+    width: calc(50% - 20px);
+}
+.cta {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 20px 0px;
+}
+.cta a {
+    background-color: rgb(47, 152, 160);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.blood-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.blood-type {
+    width: 80px;
+    height: 30px;
+    border: 1px solid black;
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.blood-type > div {
+    width: 40px;
+    height: 30px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comments form input {
+    margin: 10px 0px;   
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+.comments form button {
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: rgb(30, 165, 109);
+    color: white;
+    padding: 5px 10px;
+}
+.comments form button:hover {
+    background-color: rgb(12, 70, 45);
+}
+
+/* responsiveness */
+@media (max-width: 310px) {
+    .cta {
+        flex-direction: column;
+    }
+    .cta a {
+        margin: 10px 0px;
+    }
+}
+@media (max-width: 285px) {
+    main {
+        padding-bottom: 400px;
+    }
+}
