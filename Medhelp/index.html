@@ -1,110 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedHelp:24/7 Help</title>
-    <script src="https://kit.fontawesome.com/a35fb36c6a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/index.css">
+    <title>Home</title>
 </head>
-
 <body>
-
+    
     <header>
-        <div class="navbar" id="nbar">
-            <div id="bmenu" onclick="bmenu()">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+        <div class="login-bar" id="nav-desk">
+            <div class="navbar-desktop">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Need Help?</a></li>
+                </ul>
             </div>
-
-            <div class="search-bar">
-                <h1>Need Help?</h1>
-                <form>
+            
+            <div class="login">
+                <a href="#">Customer login</a>
+                <a href="#">Admin login</a>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-mob">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Need help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-warning" href="#">Customer Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-light" href="#">Admin Login</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <div class="main-header">
+            <div class="overlay-black"></div>
+            <div id="content">
+                <h1 class="title">Medhelp</h1>
+                <div class="search-bar">
                     <div class="location">
-                        <span>
-                            location
-                        </span>
-                        <i class="fas fa-map-marker-alt" id="ico"></i>
-                        <input type="tel" id="pin" class="pinno" maxlength="6" placeholder="700144">
+                        <select name="" id="med-hos-op">
+                            <option value="Hospital">Hospital</option>
+                            <option value="MedShop">Pharmacy</option>
+                        </select>
                     </div>
-                    <input type="text" placeholder="Search...">
-                    <button type="submit">
-                        <i class="fas fa-search" id="search-ico"></i>
-                    </button>
-                </form>
-            </div>
-
-            <ul>
-                <li><a href="#"> home</a></li>
-                <li><a href="#">contact us</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">help</a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-
-        <div class="container">
-            <div class="items" id="item1">First Box</div>
-            <div class="items" id="item2">Second Box</div>
-            <div class="items" id="item3">Third Box</div>
-            <div class="items" id="item4">Forth Box</div>
-            <div class="items" id="item5">Fifth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-            <div class="items" id="item6">Sixth Box</div>
-        </div>
-    </main>
-    <footer>
-        <div class="ftr">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#">About us</li></a>
-                            <li><a href="#">Our services</li></a>
-                            <li><a href="#">Privacy policy</li></a>
-                            <li><a href="#">Affiliate program</li></a>
-                        </ul>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Get help</h4>
-                        <ul>
-                            <li><a href="#">FAQ</li></a>
-                            <li><a href="#">Order Status</li></a>
-                            <li><a href="#">Shipping</li></a>
-
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Follow us</h4>
-                        <div class="social-links">
-                            <a href="#"><i class=" fab fa-facebok-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class=" fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-whatsapp"></i></a>
-
-                            <a href="#"></a>
-                        </div>
-                    </div>
+                    <input type="text" placeholder="Search here..">
+                    <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
+    </header>
+    <main>
+        <div class="pincode">
+            Your Pincode : 
+            <input type="text" id="pincode" placeholder="700001" maxlength="6"> 
+            <button id="pin-search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <section class="nearby-med-store">
+            <h2>Nearby Medical Stores</h2>
+            <div class="d-flex justify-content-around flex-wrap">`
+                <a href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/shopping.png" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Store Name 1</h5>
+                        <p class="card-text">
+                            Store address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/shopping.png" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Store Name 1</h5>
+                        <p class="card-text">Store address</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-danger">Closed</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/shopping.png" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Store Name 3</h5>
+                        <p class="card-text">
+                            Store address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/shopping.png" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Store Name 4</h5>
+                        <p class="card-text">
+                            Store address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </section>    
+        <section class="nearby-hospitals">
+            <h2>Nearby Hospitals</h2>
+            <div class="d-flex justify-content-around flex-wrap">
+                <a href="/">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Hospital Name 1</h5>
+                        <p class="card-text">
+                            Hospital address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Hospital Name 1</h5>
+                        <p class="card-text">Hospital address</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-danger">Closed</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Hospital Name 3</h5>
+                        <p class="card-text">
+                            Hospital address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+                <a href="/">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">Hospital Name 4</h5>
+                        <p class="card-text">
+                            Hospital address
+                        </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            Open Hours: 9am - 10pm
+                            <button type="button" class="btn btn-success">Open now</button>
+                        </li>
+                        <li class="list-group-item">Phone : 9999999999</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </section>    
+    </main>
+    <footer>
+        <div class="row">
+            <div class="row-one">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="row-two">
+                <h3>Social Links</h3>
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/index.js"></script>
+</body>
 </html>

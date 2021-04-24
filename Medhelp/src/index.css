@@ -1,0 +1,295 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a, a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+.navbar {
+    box-shadow: 0px 10px 10px rgb(153, 153, 153);
+}
+.login-bar {
+    height: 47px;
+    background-color: rgb(87, 255, 199);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+}
+.login-bar .navbar-desktop ul {
+    display: flex;
+    align-content: center;
+}
+.navbar-desktop ul li {
+    list-style: none;
+}
+.navbar-desktop ul li a {
+    position: relative;
+    top: 5px;
+    padding: 15px 15px !important;
+    margin: 0px 10px !important;
+    font-size: 20px !important;
+}
+.login-bar a {
+    color: rgb(22, 20, 20) !important;
+    text-decoration: none !important;
+}
+.navbar-desktop ul li a:hover, a.active {
+    background-color: rgba(0, 0, 0, 0.678) !important;
+    color: white !important;
+    transition: all 0.2s;
+}
+.login a {
+    background-color: rgb(5, 83, 172);
+    color: white !important;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+.login a:hover {
+    background-color: rgba(5, 83, 172, 0.822) !important;
+    transition: 0.2s;
+}
+#nav-mob {
+    background-color: rgb(87, 255, 199) !important;
+}
+.main-header {
+    height: 300px;
+    background: url("/assets/pulse.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.main-header #content {
+    position: absolute;
+    top: 0px;
+    color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3324;
+    display: flex;
+    justify-content: space-around;
+}
+#content h1, #content .search-bar {
+    margin-top: 70px;
+}
+#content h1 {
+    font-size: 60px;
+    text-shadow: 0px 0px 10px aqua;
+}
+.overlay-black {
+    background-color: rgba(0, 0, 0, 0.836);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.search-bar {
+    display: flex;
+    height: 50px;
+}
+.search-bar > input {
+    width: 250px;
+    padding: 0px 10px;
+    height: 100%;
+    outline: none;
+    font-size: 20px;
+    border: 2px solid rgba(230, 98, 65, 0.5);
+}
+.search-bar .location {
+    display: flex;
+    align-content: space-around;
+    width: 100px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid rgba(230, 98, 65, 0.596);
+    color: black;
+    padding-right: 5px;
+}
+.location div input {
+    outline: none;
+    border: 0px;
+    width: 47px;
+    font-size: 14px;
+}
+#med-hos-op {
+    width: 90px;
+    border: none;
+    height: 40px;
+    outline: none;
+}
+.fa-map-marker {
+    font-size: 30px;
+    margin: 5px;
+    margin-right: 11px;
+    color: red;
+}
+.search-bar > a {
+    background-color: rgb(18, 160, 160);
+    height: 100%;
+    width: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(230, 98, 65, 0.534);
+}
+.search-bar > a:hover {
+    background-color: rgb(35, 156, 72);
+    transition: 0.2s;
+}
+.search-bar > a > i {
+    font-size: 22px;
+}
+main {
+    width: 100%;
+    padding: 0px 40px;
+    padding-bottom: 200px;
+    margin-top: 50px;
+}
+.pincode {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+#pincode {
+    width: 70px;
+    border: none;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+    outline: none;
+}
+.pincode #pin-search {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    background-color: rgb(24, 165, 118);
+    color: white;
+}
+#pincode:focus {
+    border-bottom: 1px solid rgb(0, 119, 255);
+}
+main section h2 {
+    border-left:  5px solid rgb(92, 160, 2);
+    padding-left: 10px;
+    margin: 15px 0px; 
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    min-height: 50px;
+    background-color: rgb(241, 127, 45);
+    padding: 10px 50px;
+    padding-top: 40px;
+}
+footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.row-one, .row-two {
+    padding: 0px 20px;
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li a {
+    color: white;
+}
+
+/* bootstrap modifications */
+.nav-link {
+    text-align: center;
+    color: black !important;
+}
+.nav-link.active, .nav-link:hover {
+    background-color: rgb(30, 123, 210);
+    color: white !important;
+}
+.card {
+    margin: 10px;
+}
+.card:hover {
+    box-shadow: 0px 0px 10px rgb(184, 184, 184);
+}
+
+/* responsivenss */
+
+@media (min-width:875px) {
+    #nav-mob {
+        display: none;
+    }
+    #nav-desk {
+        box-shadow: 0px 10px 10px rgb(136, 135, 135);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #content h1, #content .search-bar {
+        margin-top: 10px;
+    }
+    .main-header {
+        height: 190px;
+    }
+    #nav-mob {
+        display: block;
+    }
+    #nav-desk {
+        display: none;
+    }
+    .hos-detail-flex {
+        flex-direction: column;
+    }
+    .hos-detail-flex img {
+        min-width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    .hos-detail-flex .hos-detail {
+        min-width: 100%;
+    }
+}
+@media (max-width: 530px) {
+    .row {
+        flex-direction: column;
+    }
+    main {
+        padding-bottom: 370px;
+    }
+}
+@media (max-width: 470px) {
+    .search-bar {
+        transform: scale(0.7);
+    }
+    h1.title {
+        font-size: 50px !important;
+    }
+}
