@@ -3,11 +3,23 @@
     justify-content: space-between;
     margin-bottom: 30px;
 }
+.pha-detail-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
 .hos-detail-flex img {
     width: calc(50% - 70px);
     height: 100%;
 }
+.pha-detail-flex img {
+    width: calc(50% - 70px);
+    height: 100%;
+}
 .hos-detail-flex .hos-detail {
+    width: calc(50% - 20px);
+}
+.pha-detail-flex .pha-detail {
     width: calc(50% - 20px);
 }
 .cta {
@@ -56,6 +68,29 @@
 }
 .comments form button:hover {
     background-color: rgb(12, 70, 45);
+}
+.av-med-detail {
+    margin: 10px 0px;
+}
+.medicine-result {
+    width: 80%;
+    min-height: 50px;
+    border: 1px solid grey;
+    background-color: rgb(244, 246, 247);
+    display: flex;
+    justify-content: space-between;
+}
+.medicine-result .med-price {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid grey;
+}
+.medicine-result .med-name {
+    padding: 5px;
+    display: flex;
+    align-items: center;
 }
 
 /* responsiveness */

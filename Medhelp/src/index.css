@@ -67,7 +67,7 @@ header {
 }
 .main-header {
     height: 300px;
-    background: url("https://arnabiem.github.io/Medhelp/assets/pulse.jpg") center no-repeat;
+    background: url("/assets/pulse.jpg") center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -274,6 +274,17 @@ footer ul li a {
         margin-bottom: 40px;
     }
     .hos-detail-flex .hos-detail {
+        min-width: 100%;
+    }
+    .pha-detail-flex {
+        flex-direction: column;
+    }
+    .pha-detail-flex img {
+        min-width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    .pha-detail-flex .pha-detail {
         min-width: 100%;
     }
 }

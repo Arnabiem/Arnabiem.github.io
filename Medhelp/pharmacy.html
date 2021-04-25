@@ -24,7 +24,7 @@
             </div>
             
             <div class="login">
-                <a href="#">Admin login</a>
+                <a href="./admin/login.html">Admin login</a>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav-mob">
@@ -46,14 +46,64 @@
                   <a class="nav-link" href="#">Need help</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link bg-warning" href="#">Admin Login</a>
+                  <a class="nav-link bg-warning" href="./admin/login.html">Admin Login</a>
                 </li>
               </ul>
             </div>
           </nav>
     </header>
     <main>
-        
+      <div class="pha-detail-flex">
+        <img src="https://arnabiem.github.io/Medhelp/assets/shopping.png" alt="pharmacy-image">
+        <div class="pha-detail">
+            <div class="rating">
+                <div class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                     <span>(149)</span>
+                </div>
+            </div>
+            <h2>ABC Medical Store</h2>
+            <div class="cta">
+                <a href="callto:919999999999" class="call"><i class="fa fa-phone" aria-hidden="true"></i> Call now</a>
+                <a href="#" class="directions"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Directions</a>
+            </div>
+            <p class="pha-address">
+                <b>Address:</b> Dynamic address of the medical store
+            </p>
+            <p>
+              <b>Search for available medicines details: </b>
+              <div class="search-bar">
+                <input type="text" placeholder="Search for medicine.." style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+              </div>
+            </p>
+            <!-- show the below paragraph only after the successful search of medicine to show details -->
+           <p class="av-med-detail">
+              <div class="medicine-result">
+                <div class="med-name">Medicine name 1</div>
+                <div class="med-price">&#8377;<span id="med-price">100</span>/-</div>
+              </div>
+            </p>
+        </div>
+    </div>
+    <div class="comments">
+      <form action="">
+          <h4>Reviews</h4>
+          <input type="text" placeholder="Your name" required>
+          <input type="text" id="com-in" placeholder="Leave a review" required>
+          <button type="submit">Commennt</button>
+      </form>
+      <div class="comment">
+          <div class="com-name"></div>
+          <div class="com">
+              
+          </div>
+      </div>
+    </div>
     </main>
     <footer>
         <div class="row">
