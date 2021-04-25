@@ -43,52 +43,52 @@ include("includes/sidebar.php");
                   <tbody>
                   <tr>
                     <td>1</td>
-                    <td><a href="#">Pharmacy 1</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 1</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td><a href="#">Pharmacy 2</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 2</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td><a href="#">Pharmacy 3</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 3</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td><a href="#">Pharmacy 4</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 4</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>5</td>
-                    <td><a href="#">Pharmacy 5</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 5</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>6</td>
-                    <td><a href="#">Pharmacy 6</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 6</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>7</td>
-                    <td><a href="#">Pharmacy 7</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 7</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>8</td>
-                    <td><a href="#">Pharmacy 8</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 8</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>9</td>
-                    <td><a href="#">Pharmacy 9</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 9</a></td>
                     <td>700001</td>
                   </tr>
                   <tr>
                     <td>10</td>
-                    <td><a href="#">Pharmacy 10</a></td>
+                    <td><a href="./pharmDetails.php">Pharmacy 10</a></td>
                     <td>700001</td>
                   </tr>
                   </tbody>

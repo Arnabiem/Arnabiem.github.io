@@ -8,3 +8,6 @@
     object-fit: cover !important;
     object-position: 0% 0% !important;
 }
+td.availability-box {
+    width: 100px !important;
+}
