@@ -1,0 +1,10 @@
+.invisible {
+    visibility: hidden;
+}
+
+.brand-img-cropped {
+    width: 30px !important;
+    height: 40px;
+    object-fit: cover !important;
+    object-position: 0% 0% !important;
+}
