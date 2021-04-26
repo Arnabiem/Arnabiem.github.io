@@ -141,7 +141,7 @@ header {
     margin-right: 11px;
     color: red;
 }
-.search-bar > a {
+.search-bar > button {
     background-color: rgb(18, 160, 160);
     height: 100%;
     width: 40px;
@@ -154,11 +154,11 @@ header {
     color: rgb(255, 255, 255);
     border: 1px solid rgba(230, 98, 65, 0.534);
 }
-.search-bar > a:hover {
+.search-bar > button:hover {
     background-color: rgb(35, 156, 72);
     transition: 0.2s;
 }
-.search-bar > a > i {
+.search-bar > button > i {
     font-size: 22px;
 }
 main {
