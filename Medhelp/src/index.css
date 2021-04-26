@@ -235,7 +235,13 @@ footer ul li a {
 .card:hover {
     box-shadow: 0px 0px 10px rgb(184, 184, 184);
 }
+main section .result
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 
+}
 /* responsivenss */
 
 @media (min-width:875px) {
