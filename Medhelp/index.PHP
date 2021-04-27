@@ -73,10 +73,10 @@
     <main>
     <form action="" method="POST">
         <div class="pincode"> Your Pincode :
-                <input type="text" id="pincode" name="searchbox" placeholder="700001" maxlength="6">
+                <input type="text" id="pincode" name="searchbox" placeholder="700001" maxlength="6" required>
                 <button id="pin-search" name="sbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
             </form>
-        </div>
         <?php
         $connection = mysqli_connect("localhost", "root", "", "iemhcktn");
         //echo "CONNECTION ESTABLISHED! ready to go";
@@ -87,15 +87,16 @@
         ?>
             <section class="nearby-med-store">
                 <h2>Nearby Medical Stores</h2>
-                <a href="">
+              
                 <div class="d-flex justify-content-around flex-wrap">
                         <?php
                         if (mysqli_num_rows($query_run) > 0) {
                             while ($row = mysqli_fetch_array($query_run)) { ?>
                                 <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="assets/shopping.png" alt="Card image cap">
+                                    <img class="card-img-top" src="assets/ms.jpg" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                                    <a href="pharmacy.php?id=<?php echo $row['sid']; ?>">
+                                        <h5 class="card-title"><?php echo $row['name']; ?></h5></a>
                                         <p class="card-text">
                                             <?php echo $row['address']; ?>
                                         </p>
@@ -115,85 +116,54 @@
                         }
                         ?>
                 </div>
-                </a>
+               
             <?php
         }
             ?>
             </section>
+
+            <?php
+        $connection = mysqli_connect("localhost", "root", "", "iemhcktn");
+        //echo "CONNECTION ESTABLISHED! ready to go";
+        if (isset($_POST['sbtn'])) {
+            $pin = $_POST['searchbox'];
+            $query = "SELECT * FROM hospital WHERE pincode='$pin' ";
+            $query_run = mysqli_query($connection, $query);
+        ?>
             <section class="nearby-hospitals">
                 <h2>Nearby Hospitals</h2>
+                <a href="/">
                 <div class="d-flex justify-content-around flex-wrap" id="rslt">
-                    <a href="/">
+                <?php
+                        if (mysqli_num_rows($query_run) > 0) {
+                            while ($row = mysqli_fetch_array($query_run)) { ?>
                         <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="assets/hospital.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title">Hospital Name 1</h5>
+                                <h5 class="card-title"><?php echo $row['name']; ?></h5>
                                 <p class="card-text">
-                                    Hospital address
+                                <?php echo $row['address']; ?>
                                 </p>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    Open Hours: 9am - 10pm
+                                <?php echo $row['timing']; ?>
                                     <button type="button" class="btn btn-success">Open now</button>
                                 </li>
-                                <li class="list-group-item">Phone : 9999999999</li>
+                                <li class="list-group-item">Phone :<?php echo $row['phno']; ?></li>
                             </ul>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Hospital Name 1</h5>
-                                <p class="card-text">Hospital address</p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    Open Hours: 9am - 10pm
-                                    <button type="button" class="btn btn-danger">Closed</button>
-                                </li>
-                                <li class="list-group-item">Phone : 9999999999</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="/">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Hospital Name 3</h5>
-                                <p class="card-text">
-                                    Hospital address
-                                </p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    Open Hours: 9am - 10pm
-                                    <button type="button" class="btn btn-success">Open now</button>
-                                </li>
-                                <li class="list-group-item">Phone : 9999999999</li>
-                            </ul>
-                        </div>
-                    </a>
-                    <a href="/">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="/assets/hospital.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Hospital Name 4</h5>
-                                <p class="card-text">
-                                    Hospital address
-                                </p>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
-                                    Open Hours: 9am - 10pm
-                                    <button type="button" class="btn btn-success">Open now</button>
-                                </li>
-                                <li class="list-group-item">Phone : 9999999999</li>
-                            </ul>
-                        </div>
-                    </a>
+                        <?php
+                            }
+                        } else {
+                            echo "Sorry ! No nearby hospital found ";
+                        }
+                        ?>
                 </div>
+                </a>
+                <?php
+        }
+            ?>
             </section>
     </main>
     <footer>
