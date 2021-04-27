@@ -89,7 +89,7 @@ $sdata[]=$row;
               <b>Search for available medicines details: </b>
               <div class="search-bar">
                 <input type="text" placeholder="Search for medicine.." style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
-                <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <a href="#" style="background-color: rgb(21, 169, 196); width: 35px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; display: flex; align-items: center; justify-content: center;"><i class="fa fa-search" style="color: white;" aria-hidden="true"></i></a>
               </div>
             </p>
             <!-- show the below paragraph only after the successful search of medicine to show details -->
