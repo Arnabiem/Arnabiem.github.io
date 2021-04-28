@@ -16,7 +16,7 @@
         <div class="login-bar" id="nav-desk">
             <div class="navbar-desktop">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Need Help?</a></li>
@@ -140,7 +140,8 @@
                         <div class="card" style="width: 18rem;">
                             <img class="card-img-top" src="assets/hospital.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                            <a href="hospital.php?id=<?php echo $row['hid']; ?>">
+                                <h5 class="card-title"><?php echo $row['name']; ?></h5></a>
                                 <p class="card-text">
                                 <?php echo $row['address']; ?>
                                 </p>

@@ -26,7 +26,7 @@ $sdata[]=$row;
         <div class="login-bar" id="nav-desk">
             <div class="navbar-desktop">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Need Help?</a></li>
@@ -44,7 +44,7 @@ $sdata[]=$row;
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">About us</a>
@@ -65,7 +65,7 @@ $sdata[]=$row;
     <main>
     <?php foreach ($sdata as $row){    ?> 
       <div class="pha-detail-flex">
-        <img src="https://arnabiem.github.io/Medhelp/assets/shopping.png" alt="pharmacy-image">
+        <img src="https://arnabiem.github.io/Medhelp/assets/ms.jpg" alt="pharmacy-image">
         <div class="pha-detail">
             <div class="rating">
                 <div class="stars">
