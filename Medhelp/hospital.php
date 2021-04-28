@@ -11,12 +11,22 @@
     <title>Hsopital Details</title>
 </head>
 <body>
-    
+<?php 
+$connection = mysqli_connect("localhost", "root", "", "iemhcktn");
+//echo "CONNECTION ESTABLISHED! ready to go";
+if (isset($_GET['id'])) {
+$shopID = $_GET['id'];
+$query = "SELECT * FROM hospital WHERE hid='$shopID' ";
+$query_run = mysqli_query($connection, $query);
+$row = mysqli_fetch_array($query_run);
+$hdata[]=$row;
+}
+ ?>
     <header>
         <div class="login-bar" id="nav-desk">
             <div class="navbar-desktop">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Need Help?</a></li>
@@ -53,6 +63,7 @@
           </nav>
     </header>
     <main>
+    <?php foreach ($hdata as $row){    ?> 
         <div class="hos-detail-flex">
             <img src="assets/hospital.jpg" alt="hospital-image">
             <div class="hos-detail">
@@ -66,7 +77,7 @@
                          <span>(149)</span>
                     </div>
                 </div>
-                <h2>Hospital Name</h2>
+                <h2><?php echo $row['name']; ?></h2>
                 <div class="cta">
                     <a href="callto:919999999999" class="call"><i class="fa fa-phone" aria-hidden="true"></i> Call now</a>
                     <a href="#" class="directions"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> Directions</a>
@@ -120,6 +131,7 @@
                 </p>
             </div>
         </div>
+        <?php } ?>
         <div class="comments">
             <form action="">
                 <h4>Reviews</h4>
