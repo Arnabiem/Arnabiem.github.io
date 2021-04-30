@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="src/index.css">
     <title>Home</title>
 </head>
-
 <body>
     <header>
         <div class="login-bar" id="nav-desk">
@@ -58,13 +57,20 @@
                 <form action="" method="POST">
                     <div class="search-bar">
                         <div class="location">
-                            <select name="" id="med-hos-op">
-                                <option value="Hospital">Hospital</option>
-                                <option value="MedShop">Pharmacy</option>
+                            <select name="options" id="med-hos-op">
+                                <option value="hos">Hospital</option>
+                                <option value="1">Pharmacy</option>
+                                <option value="2">Medicine</option>
                             </select>
                         </div>
                         <input type="text" placeholder="Search here..">
-                        <button name="" ><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <button name="search-btn" ><i class="fa fa-search" aria-hidden="true"></i></button>
+
+                        <div class="pincode"> Your Pincode :
+                <input type="text" id="pincode" name="searchbox" placeholder="700001" maxlength="6" required>
+                <button id="pin-search" name="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+
                     </div>
                 </form>
             </div>
@@ -72,18 +78,21 @@
     </header>
     <main>
     <form action="" method="POST">
-        <div class="pincode"> Your Pincode :
-                <input type="text" id="pincode" name="searchbox" placeholder="700001" maxlength="6" required>
-                <button id="pin-search" name="sbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </div>
+    
             </form>
         <?php
         $connection = mysqli_connect("localhost", "root", "", "iemhcktn");
         //echo "CONNECTION ESTABLISHED! ready to go";
-        if (isset($_POST['sbtn'])) {
+        if (isset($_POST['search-btn'])) 
+        {
             $pin = $_POST['searchbox'];
-            $query = "SELECT * FROM pharmacy WHERE pincode='$pin' ";
-            $query_run = mysqli_query($connection, $query);
+            $cat =$_POST['options'];
+            if($cat==1)
+            {
+                $query = "SELECT * FROM pharmacy WHERE pincode='$pin' ";
+                $query_run = mysqli_query($connection, $query);
+            
+      
         ?>
             <section class="nearby-med-store">
                 <h2>Nearby Medical Stores</h2>
@@ -114,21 +123,18 @@
                         } else {
                             echo "Sorry ! No nearby medical shop found ";
                         }
+                    }
                         ?>
                 </div>
                
-            <?php
-        }
-            ?>
+          
             </section>
-
             <?php
-        $connection = mysqli_connect("localhost", "root", "", "iemhcktn");
-        //echo "CONNECTION ESTABLISHED! ready to go";
-        if (isset($_POST['sbtn'])) {
-            $pin = $_POST['searchbox'];
+        if($cat=='hos')
+        {
             $query = "SELECT * FROM hospital WHERE pincode='$pin' ";
             $query_run = mysqli_query($connection, $query);
+        
         ?>
             <section class="nearby-hospitals">
                 <h2>Nearby Hospitals</h2>
@@ -159,6 +165,7 @@
                         } else {
                             echo "Sorry ! No nearby hospital found ";
                         }
+                    }
                         ?>
                 </div>
                 </a>
